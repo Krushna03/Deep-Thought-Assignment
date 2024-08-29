@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header Design</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Top bar -->
+    <header class="top-header">
+        <div class="logo-container">
+            <img src="icons/LOGO.png" alt="Deep Thought Logo" class="logo">
+        </div>
+        <div class="icon-container">
+            <img src="icons/home.png" alt="Home Icon" class="icon">
+            <img src="icons/binoculars-solid.svg" alt="Binoculars Icon" class="icon">
+            <img src="icons/service_13047459.png" alt="Tools Icon" class="icon">
+            <img src="icons/notifications.svg" alt="Notification Icon" class="icon">
+            <img src="icons/user-solid.svg" alt="Profile Icon" class="icon">
+            <img src="icons/ellipsis-vertical-solid.svg" alt="Options Icon" class="icon">
+        </div>
+    </header>
+
+    <!-- Sidebar Toggle Button -->
+    <button id="open-sidebar" class="toggle-btn">&#9654;</button>
+     
+    <!-- Left Sidebar -->
+    <div id="left-sidebar" class="left-sidebar closed">
+      <div class="top-left-sidebar"> </div>
+        <div class="sidebar-content">
+                <p class="sidebar-number">1</p>
+        </div>
+    </div>
+
+    <div id="main-content" class="main-content">
+       <div class="title">
+           <p class="title-text">Technical Project Management</p>
+           <p class="title-btn">Submit Task</p>
+       </div>
+
+       <div class="summary">
+           <p class="summary-title">Explore the world of management</p>
+           <p class="summary-text">
+            As a project manager, you play an important role in leading a project through initiation, planning, execution, monitoring, controlling, and completion. How? Do you want to manage each and every step of your life?
+           </p>
+       </div>
+    </div>
+
+    <!-- Notice Board Section -->
+    <div id="notice-board" class="notice-board">
+        <button id="close-notice-board" class="close-btn">&times;</button>
+        <p class="notice-board-text">Notice Board</p>
+    </div>
+
+
+    <div class="main-card">
+       <!-- 1 -->
+       <div class="card">
+        <div class="card-header">
+            <h2>Technical Project Management</h2>
+            <button class="info-button">i</button>
+        </div>
+        <div class="card-content">
+            <p class="description"><strong>Description:</strong> Story of Alignment Scope of Agility Specific Accountable Staggering Approach</p>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/xyz123abc" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+       </div>
+
+       <!-- 2 -->
+       <div class="card">
+        <div class="card-header">
+            <h2>Threadbuild</h2>
+            <button class="info-button">i</button>
+        </div>
+    
+          <p class="description"><strong>Description:</strong>  Watch the video and threadbuild, and jot out key threads while watching the video</p>
+               
+            <div class="thread">
+                <img class="dropdown" src="icons/dropdown.svg" alt="">
+                <p class="thread-header-title"> Thread A </p>
+            </div>
+                
+            <div class="input-section">
+
+              <div class="input-boxes">
+                <div class="sub-thread">
+                    <div class="sub-thread-label">Sub thread 1</div>
+                    <input type="text" class="sub-thread-input" placeholder="Enter Text here">
+                </div>
+
+                <div class="sub-thread">
+                    <div class="sub-thread-label">Sub Interpretation 1</div>
+                    <input type="text" class="sub-thread-input" placeholder="Enter Text here">
+                </div>
+              </div>
+                
+                 <div class="sub-thread-actions">
+                    <select class="sub-thread-action">
+                        <option value="">Select Categ</option>
+                        <option value="">Option 1</option>
+                        <option value="">Option 2</option>
+                    </select>
+                    <select class="sub-thread-action">
+                        <option value="">Select Process</option>
+                        <option value="">Option 1</option>
+                        <option value="">Option 2</option>
+                    </select>
+                </div>
+
+                <button class="add-sub-thread"> + Sub-thread </button>
+
+                <div class="sub-thread-1">
+                    <label class="sub-thread-label">Summary for Thread A</div>
+                    <textarea type="text" id="sub-thread-input-1" placeholder="Enter Text here"></textarea>
+                </div>            
+       </div>
+        
+       <!-- 3 -->
+       <div class="card">
+            <div class="card-header">
+                <h2>Structure your pointers</h2>
+                <button class="info-button">i</button>
+            </div>
+            <div class="card-content">
+                <p class="description"><strong>Description:</strong> Write a 300 - 400 word article from your thread . Publish your understanding and showcase your understanding to the entire world </p>
+            </div>
+            <div class="text-editor">
+                <div class="text-editor-content">
+                    <label for="title">Title:</label>
+                    <input type="text" id="title" name="title">
+                    
+                    <label for="content">Content:</label>
+                    <textarea id="content" name="content"></textarea>
+                </div>
+            </div>
+        </div>
+           
+        <!-- 4 -->
+        <div class="card">
+            <div class="card-header">
+                <h2>4SA Method</h2>
+                <button class="info-button">i</button>
+            </div>
+            <div class="card-content card-desc">
+                <p class="description"><strong>Description:</strong> To Explore more read more  </p>
+            </div>
+            <div class="collapsible-section">
+                <h3 class="collapsible-header">Introduction</h3>
+                <div class="collapsible-content">
+                    <p>The 4SA Method, How to bring a idergsea into progress?</p>
+                    <p class="see-more">See More</p>
+                </div>
+            </div>
+            <div class="collapsible-section">
+                <h3 class="collapsible-header">Introduction</h3>
+                <div class="collapsible-content">
+                    <p>How are you going to develop your stratergy ? Which method are you going to use to develop a stratergy ? What if the project is lengthy?</p>
+                    <p class="see-more">See More</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Action Buttons -->
+    <div class="floating-buttons">
+        <div class="floating-button">
+            <img src="icons/question.svg" alt="Help Icon">
+        </div>
+        <div class="floating-button">
+            <img src="icons/people-arrows-solid.svg" alt="Meeting Icon">
+        </div>
+        <div class="floating-button">
+            <img src="icons/calendar-days-solid.svg" alt="Calendar Icon">
+        </div>
+    </div>
+
+    <div id="task-container"></div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

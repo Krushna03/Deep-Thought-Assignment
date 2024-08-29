@@ -1,0 +1,510 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+
+/* Side bar  */
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(244, 246, 244);
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-bottom: 4px solid rgb(235, 235, 235);
+}
+
+.logo {
+  height: 40px;
+  margin-left: 60px;
+  padding: 5px;
+}
+
+.icon-container {
+  margin-right: 25px;
+}
+
+.icon {
+  height: 22px;
+  margin-right: 20px;
+  cursor: pointer;
+  border-radius: 70%;
+}
+
+/* Sidebar below header */
+.left-sidebar {
+  width: 130px;
+  background-color: #f4f4f4;
+  height: calc(100vh - 150px);
+  position: fixed;
+  top: 80px;
+  left: 0;
+  transition: width 0.3s ease;
+  z-index: 1000;
+  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+  border-bottom-right-radius: 25px;
+  border-top-right-radius: 25px;
+  border: 2px solid #f4f4f4;
+  overflow: hidden; /* Prevents content overflow when sidebar is closed */
+}
+
+.left-sidebar.open {
+  width: 320px; /* Adjust width for open state */
+}
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 20px;
+}
+
+.sidebar-number {
+  background-color: white;
+  border: 2px solid blue;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: blue;
+  margin-left: 32px;
+}
+
+/* Open Sidebar Content */
+.sidebar-header {
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  padding: 13px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  padding-left: 20px;
+}
+
+.sidebar-links {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.sidebar-link {
+  font-size: 16px;
+  color: rgb(44, 44, 48);
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+/* Open Sidebar Button */
+.toggle-btn {
+  position: fixed;
+  top: 88px;
+  left: 95px;
+  background-color: #0c0d0d;
+  color: white;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+  z-index: 1001;
+  font-size: 18px;
+}
+
+.top-left-sidebar {
+  height: 40px;
+  background: #000;
+}
+
+/* Close button */
+#close-sidebar {
+  position: absolute;
+  top: 5px;
+  left: 270px;
+}
+
+.left-sidebar.open #close-sidebar {
+  display: block;
+}
+
+.sidebar-link-title {
+  margin-left: 20px;
+  font-size: 15px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.sidebar-link-title span {
+  margin-right: 10px;
+}
+
+.main-content {
+  margin-left: 110px; /* Content stays fixed when sidebar opens */
+  transition: margin-left 0.3s ease;
+  z-index: 0;
+}
+
+.left-sidebar.open ~ .main-content {
+  margin-left: 110px; /* Keeps the content in place */
+}
+
+
+.title {
+  margin-left: 80px;
+  margin-right: 150px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title-text {
+  font-size: 25px;
+  font-weight: 700;
+  color: blue;
+}
+
+.title-btn {
+  padding: 0px 28px;
+  border-radius: 15px;
+  background: blue;
+  color: white;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+}
+
+.summary {
+  padding: 8px 20px;
+  margin-left: 80px;
+  margin-right: 150px;
+  margin-top: 20px;
+  background: rgb(228, 227, 227);
+}
+
+.summary-title {
+  font-size: 19px;
+  font-weight: 800;
+  color: black;
+  padding: 0px;
+}
+.summary-text {
+ font-size: 16px;
+ color: black;
+}
+
+
+
+/*  card */
+.main-card {
+  margin: 100px 200px 30px 200px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 80px;
+}
+
+.card {
+  background-color: #fff;
+  width: 500px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1),
+            -4px -4px 8px rgba(0, 0, 0, 0.1),
+            -4px 4px 8px rgba(0, 0, 0, 0.1),
+            4px -4px 8px rgba(0, 0, 0, 0.1);
+
+  overflow: hidden;
+}
+
+.card-header {
+  background-color: #000;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+}
+
+.card-header h2 {
+  font-size: 18px;
+  margin: 0;
+  flex: 1; 
+  text-align: center; 
+}
+
+.info-button {
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 50%;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/* .card-content {
+  padding: 15px;
+} */
+
+.description {
+  margin-bottom: 15px;
+  font-size: 14px;
+  line-height: 1.6;
+  padding: 15px;
+}
+
+.video-container {
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  position: relative;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+
+
+/* 2 */
+
+.thread {
+  display: flex;
+  border-top: 1px solid #ccc;
+  background: #f5f1d2;
+}
+.dropdown{
+  height: 20px;
+  width: 20px;
+  padding-top: 15px;
+  padding-left: 10px;
+}
+.thread-header-title {
+  font-size: 17px;
+  font-weight: 600;
+  margin-left: 70px;
+}
+
+.input-section {
+  padding: 15px 20px;
+}
+
+.input-boxes {
+   display: flex;
+   justify-content: center;
+   gap: 25px;
+   margin-top: 10px;
+}
+
+.sub-thread {
+  background-color: #f5f5f5;
+  border: 1px solid #d5d5d5;
+  border-radius: 5px;
+  padding: 10px;
+  width: 180px;
+}
+
+.sub-thread-label {
+  font-size: 16px;
+  margin-right: 10px;
+  margin-bottom: 7px;
+}
+
+.sub-thread-input {
+  flex: 1;
+  border: none;
+  font-size: 14px;
+  padding: 5px;
+  height: 40px;
+}
+.sub-thread-input:focus {
+  outline: none;
+}
+
+
+.sub-thread-actions {
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+}
+.sub-thread-action {
+  margin-top: 20px;
+  margin-right: 5px;
+  border: none;
+  padding: 7px;
+  box-shadow: 4px 4px 4px rgba(92, 91, 91, 0.1);
+}
+.sub-thread-action:focus {
+  outline: none;
+}
+
+.add-sub-thread {
+  margin-top: 20px;
+  font-size: 16px;
+  padding: 13px;
+  background-color: blue;
+  color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+
+.sub-thread-1 {
+  margin-top: 30px;
+  background-color: #f5f5f5;
+  border: 2px solid #d5d5d5;
+  border-radius: 5px;
+  padding: 10px;
+  width: 92%;
+}
+#sub-thread-input-1 {
+  border: none;
+  font-size: 14px;
+  padding: 5px;
+  height: 60px;
+  width: 430px;
+  border: 2px solid rgb(227, 225, 225);
+  box-shadow: 4px 4px 4px rgba(92, 91, 91, 0.1);
+}
+#sub-thread-input-1:focus {
+  outline: none;
+}
+
+
+
+.text-editor {
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+.text-editor-content{
+  margin-right: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+input[type="text"], textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+  border: none;
+  border: 2px solid rgb(227, 225, 225);
+  box-shadow: 4px 4px 4px rgba(92, 91, 91, 0.1);
+  margin-bottom: 15px;
+}
+
+textarea {
+  height: 200px;
+}
+
+.collapsible-section {
+  padding: 15px 15px;
+}
+.collapsible-header {
+  cursor: pointer;
+  padding: 10px;
+  background-color: #f0f0f0;
+}
+.collapsible-content {
+  padding: 0px 15px;
+}
+.see-more {
+   position: relative;
+   left: 340px;
+   top: 10px;
+   color: #333333;
+}
+.card-desc {
+   border-bottom: 2px solid #ccc;
+}
+
+
+/* Notice Board Section */
+.notice-board {
+  position: fixed;
+  right: 0;
+  top: 35%;
+  transform: translateY(-50%);
+  width: 55px;
+  height: 330px;
+  background-color: black;
+  border-radius: 25px 0 0 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: top;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.notice-board .close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 40px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.notice-board-text {
+  color: white;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+
+/* Floating Action Buttons */
+.floating-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.floating-button {
+  width: 40px;
+  height: 40px;
+  background-color: blue;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.floating-button img {
+  width: 25px;
+  height: 25px;
+  color: #000;
+}
+
+.floating-button:hover {
+  background-color: darkblue;
+}
